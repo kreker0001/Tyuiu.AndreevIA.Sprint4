@@ -27,7 +27,7 @@ int[,] array = { { 9, 6, 4, 5, 3 },
                              { 3, 7, 3, 7, 7 } };
 
 int rows = array.GetLength(0);
-int cols = array.GetLength(1);
+int cols = array.GetLength(1); 
 
 Console.WriteLine("Массив: ");
 for (int i = 0; i < rows; i++)

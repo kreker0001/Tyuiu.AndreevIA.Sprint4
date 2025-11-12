@@ -14,15 +14,9 @@ namespace Tyuiu.AndreevIA.Sprint4.Task3.V9.Test
                      { 8, 5, 9, 9, 3 },
                      { 7, 8, 7, 9, 3 },
                      { 3, 7, 3, 7, 7 } };
-
-            int[,] expected = { { 9, 1, 1, 5, 3 },
-                       { 7, 1, 7, 5, 3 },
-                       { 1, 5, 9, 9, 3 },
-                       { 7, 1, 7, 9, 3 },
-                       { 3, 7, 3, 7, 7 } };
-
+            int wait = 30;
             var res = ds.Calculate(array);
-            CollectionAssert.AreEqual(expected, res);
+            Assert.AreEqual(wait, res);
 
         }
     }
