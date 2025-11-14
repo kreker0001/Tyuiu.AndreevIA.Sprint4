@@ -4,25 +4,36 @@ namespace Tyuiu.AndreevIA.Sprint4.Task7.V5.Lib
 {
     public class DataService : ISprint4Task7V5
     {
-        public int Calculate(int n, int m, string value)
+        public int Calculate(int rows, int columns, string value)
         {
-            int[,] matrx = new int[3, 3];
-            int r = 0;
+            int[,] mtrx = new int[rows, columns];
 
-            for (int i = 0; i < n; i++)
+            int index = 0;
+
+            for (int i = 0; i < rows; i++)
             {
-                for (int j = 0; j < m; j++)
+                for (int j = 0; j < columns; j++)
                 {
 
-                    matrx[i, j] = int.Parse(value[i * 3 + j].ToString());
-                    if (matrx[i, j] % 2 == 0)
+                    mtrx[i, j] = int.Parse(value.Substring(i * columns + j, 1));
+                }
+            }
+
+            int count = 0;
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
+                {
+                    if (mtrx[i, j] % 2 == 0)
                     {
-                        r++;
+                        count++;
                     }
                 }
             }
 
-            return r;
+            return count;
+
+
         }
     }
 }

@@ -20,7 +20,7 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
 
-string[] mas = { "Театр", "Кино", "Музей", "Парк", "Зоопарк", "Концерт", "Выставка" };
+string[] mas = new string[] { "Театр", "Кино", "Музей", "Парк", "Зоопарк", "Концерт", "Выставка" };
 
 Console.WriteLine("Исходный массив");
 for (int i = 0; i < mas.Length; i++)
@@ -28,15 +28,16 @@ for (int i = 0; i < mas.Length; i++)
     Console.WriteLine(mas[i]);
 }
 
-
-
-
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 Console.WriteLine("***************************************************************************");
+Console.WriteLine("Количество элементов длина которых < 7:");
 
-foreach (var x in mas)
+string[] ds_return = ds.Calculate(mas);
+
+for (int i = 0;i < ds_return.Length; i++)
 {
-    Console.WriteLine(x);
+    Console.WriteLine(ds_return[i]);
 }
+
 Console.ReadLine();

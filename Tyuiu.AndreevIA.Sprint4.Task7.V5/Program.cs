@@ -21,42 +21,30 @@ Console.WriteLine("*************************************************************
 Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 Console.WriteLine("***************************************************************************");
 
-Console.WriteLine("Строка 246813579");
+int rows = 3;
+int columns = 3;
+int[,] mtrx = new int[rows, columns];
 
-int k = 0;
-string[,] array = new string[3, 3];
-string[] arr = { "2", "4", "6", "8", "1", "3", "5", "7", "9" };
-Console.WriteLine("***************************************************************************");
+string str = "246813579";
 
-for (int i = 0; i < 3; i++)
-{
-    for (int j = 0; j < 3; j++)
-    {
-        if (k < 9)
-        {
-            array[i, j] = arr[k];
-            k++;
-        }
-    }
-}
+int index = 0;
+
 Console.WriteLine("\nМассив:");
-
-for (int i = 0; i < 3; ++i)
+for (int i = 0; i < rows; i++)
 {
-    for (int j = 0; j < 3; j++)
+    for (int j = 0; j < columns; j++)
     {
-        Console.Write($"{array[i, j]}\t");
+        Console.Write($"{str[index]} \t");
+        index++;
     }
     Console.WriteLine();
 }
 
+
 Console.WriteLine("***************************************************************************");
 Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
 Console.WriteLine("***************************************************************************");
-string arra = "246813579";
-int a = 3;
-int b = 3;
-int z = ds.Calculate(a, b, arra);
+int z = ds.Calculate(rows, columns, str);
 Console.WriteLine(z);
 
 Console.ReadKey();

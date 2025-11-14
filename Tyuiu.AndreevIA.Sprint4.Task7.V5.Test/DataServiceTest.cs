@@ -6,15 +6,17 @@ namespace Tyuiu.AndreevIA.Sprint4.Task7.V5.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalc()
         {
+            int rows = 3;
+            int columns = 3;
+            int[,] mtrx = new int[rows, columns];
+            string str = "246813579";
             DataService ds = new DataService();
-            string array = "123456789";
-            int wail = 4;
-            int a = 3;
-            int b = 3;
-            int res = ds.Calculate(a, b, array);
-            Assert.AreEqual(wail, res);
+            int res = ds.Calculate(rows, columns, str);
+            int wait = 4;
+            Assert.AreEqual(wait, res);
+
         }
     }
 }

@@ -9,10 +9,13 @@ namespace Tyuiu.AndreevIA.Sprint4.Task6.V10.Test
         public void TestMethod1()
         {
             DataService ds = new DataService();
-            string[] mas = { "Òåàòð", "Êèíî", "Ìóçåé", "Ïàðê", "Çîîïàðê", "Êîíöåðò", "Âûñòàâêà" };
+
+            string[] mas = { "Театр", "Кино", "Музей", "Парк", "Зоопарк", "Концерт", "Выставка" };
             string[] res = ds.Calculate(mas);
-            string[] wait = { "Òåàòð", "Êèíî", "Ìóçåé", "Ïàðê" };
-            Assert.AreEqual(res, wait);
+            string[] wait = { "Театр", "Кино", "Музей", "Парк" };
+
+            CollectionAssert.AreEqual(wait, res); 
+
         }
     }
 }

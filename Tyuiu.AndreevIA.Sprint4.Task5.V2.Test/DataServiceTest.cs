@@ -15,7 +15,7 @@ namespace Tyuiu.AndreevIA.Sprint4.Task5.V2.Test
                                             { -6, -7, 6, 6, -4 },
                                             { -5, -6, -6, -6, -5 } };
 
-            int wait = 7;
+            int wait = 16;
 
             var rez = ds.Calculate(matrix);
 
